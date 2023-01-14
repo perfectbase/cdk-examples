@@ -2,6 +2,8 @@
 
 This template was initialized with `npx cdk init app --language typescript`, and then modified to support multiple environments with ease.
 
+You can check out the changes that were made in this [commit](https://github.com/perfectbase/cdk-examples/commit/02ff1e2785bb1dfaa057c1cee73dc94488f32306).
+
 ## Setup
 
 #### Install dependencies
