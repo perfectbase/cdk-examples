@@ -1,14 +1,37 @@
-# Welcome to your CDK TypeScript project
+# About the template
 
-This is a blank project for CDK development with TypeScript.
+This template was initialized with `npx cdk init app --language typescript`, and then modified to support multiple environments with ease.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## Setup
+
+#### Install dependencies
+
+```bash
+npm install
+```
+
+#### Create stage configuration
+
+```typescript
+// lib/config/CdkConfig-dev.ts
+import type Config from "./types";
+
+const cdkConfig: Config = {
+  stage: "dev",
+};
+
+export default cdkConfig;
+```
+
+#### Bootstrap the environment
+
+```bash
+npm run cdk:dev bootstrap
+```
 
 ## Useful commands
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+- `npm run deploy:dev cdk-dev-Example` deploy this stack
+- `npm run cdk:dev diff cdk-dev-Example` compare deployed stack with current state
+- `npm run cdk:dev destroy cdk-dev-Example` destroy this stack
+- `npm run cdk:dev synth` emits the synthesized CloudFormation template
